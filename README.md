@@ -5,6 +5,8 @@ I'm a self taught Web Designer
 
 Photo Credits : 
 
-- [Unsplash]: https://unsplash.com/
-- [Pexels]: https://www.pexels.com/
-- [Pixabay]: https://pixabay.com/
+- https://unsplash.com/
+- https://www.pexels.com/
+- https://pixabay.com/
+
+Any and all feedback is greatly appreciated.
