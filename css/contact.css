@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@100;200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-light: #0f0f0f;
+    --primary-dark: #e0dee0;
+    --bg-light: #ececec;
+    --bg-dark: #141414;
+    --main-font: #b8b4b4;
+    --main-header: #6d6868;
+    --input: #cac7c7;
+    --input-bg: #eceaea;
+    --btn: #a19f9f;
+    --btn-text: #e7e6e6;
+    --btn-dark: #3b3b3b;
+    --btn-hover-light: #92569e;
+    --btn-hover-dark: #31113d;
+}
+
+body {
+    background: var(--bg-light);
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    cursor: default;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: .2rem;
+    padding: 1rem;
+}
+
+nav ul li {
+    position: relative;
+    margin-left: 4.9rem;
+    list-style: none;
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    height: 1px;
+    background: var(--main-font);
+    transition: ease-out 400ms;
+}
+
+nav ul li:hover::after {
+    left: 0;
+    width: 100%;
+}
+
+nav ul li a {
+    color: var(--primary-light);
+    font-family: 'Poiret One', cursive;
+    font-style: bold;
+    font-size: 1.075rem;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.5%;
+    left: 91%;
+    height: 2rem;
+    width: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger-menu .bars {
+    position: relative;
+    height: 3px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--main-font);
+    transition: 300ms;
+}
+
+.bars::before,
+.bars::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background-color: var(--main-font);
+    transition: 300ms;
+}
+
+.bars::before {
+    transform: translateY(-8px);
+}
+
+.bars::after {
+    transform: translateY(8px);
+}
+
+.wrapper.active .hamburger-menu .bars {
+    background-color: transparent;
+}
+
+.wrapper.active .hamburger-menu .bars::before {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.wrapper.active .hamburger-menu .bars::after {
+    transform: translateY(0) rotate(45deg);
+}
+
+main {
+    height: 90%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--input);
+    max-width: 35rem;
+}
+
+.contact-form .left {
+    height: 100%;
+    background: url(../img/Contact-Form/contact-form.jpg);
+    background-color: var(--input);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-form .right {
+    padding: 7rem 1rem;
+}
+
+.contact-form h1 {
+   position: relative;
+   bottom: 2rem;
+   text-transform: capitalize;
+   letter-spacing: 1px;
+   font-family: 'Poiret One', cursive;
+   font-size: 1.5rem;
+   color: var(--main-header);
+}
+
+.contact-form .input {
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--input-bg);
+    outline: none;
+    border: solid 1px var(--input-bg);
+}
+
+.contact-form .input:focus {
+    border: 1px solid var(--main-font);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.contact-form .btn {
+    display: inline-block;
+    position: relative;
+    top: 1.5rem;
+    text-transform: uppercase;
+    font-size: .85rem;
+    padding: .25rem .75rem;
+    background-color: var(--btn);
+    border-radius: 5px;
+    transition: 200ms ease-in;
+    cursor: pointer;
+}
+
+.contact-form .btn a {
+    font-family: 'Poppins', sans-serif;
+    color: var(--btn-text);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--btn-hover-light);
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: hidden;
+    }
+    .wrapper.active .links {
+        transform: translateX(0);
+    }
+    .wrapper.active .overlay {
+        opacity: 1;
+        pointer-events: all;
+    }
+    .links {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 20em;
+        background-color: var(--bg-light);
+        transform: translateX(100%);
+        transition: 300ms;
+        z-index: 5;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+    nav ul li a {
+        font-size: 1rem;
+        color: var(--bg-dark);
+    }
+    nav ul li::after {
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+    }
+    .overlay {                               
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .7);
+        opacity: 0;
+        pointer-events: none;
+        transition: 300ms;
+        z-index: 1;
+    }
+    .contact-form {
+        margin-top: 5rem;
+        max-width: 20rem;
+        max-height: 30rem;
+        grid-template-columns: 1fr;
+    }
+    .contact-form .left {
+        height: 6.5rem;
+    }
+    .contact-form h1 {
+        font-size: 1.4rem;
+        position: relative;
+        bottom: 6rem;
+    }
+    .contact-form .input {
+        position: relative;
+        bottom: 5rem;
+        width: 85%;
+    }
+    .contact-form .btn {
+        top: -4rem;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 915px) and (orientation: landscape) {
+    nav ul {
+        justify-content: space-between;
+    }
+    nav ul li {
+        margin-left: 0;
+    }
+    main .contact-form {
+        margin-top: 10rem;
+        max-width: 30rem;
+        max-height: 30rem;
+        grid-template-columns: 1fr;
+    }
+    .contact-form .left {
+        height: 4.2rem;
+    }
+    .contact-form h1 {
+        font-size: 1.4rem;
+        position: relative;
+        bottom: 6rem;
+    }
+    .contact-form .input {
+        position: relative;
+        bottom: 5rem;
+        width: 90%;
+    }
+    .contact-form .btn {
+        top: -4rem;
+    }
+}
+
+@media screen and (max-width: 915px) and (orientation: landscape) {
+    body {
+        overflow-y: auto;
+    }
+    .hamburger-menu {
+        left: 95%;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+    main .contact-form {
+        margin-top: 15rem;
+        max-width: 30rem;
+        max-height: 30rem;
+        grid-template-columns: 1fr;
+    }
+    .contact-form .left {
+        height: 4.2rem;
+    }
+    .contact-form h1 {
+        font-size: 1.4rem;
+        position: relative;
+        bottom: 6rem;
+    }
+    .contact-form .input {
+        position: relative;
+        bottom: 5rem;
+        width: 90%;
+    }
+    .contact-form .btn {
+        top: -4rem;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background: var(--bg-dark);
+    }
+    nav ul li::after {
+        content: '';
+        background: var(--main-font);
+    }
+    nav ul li a {
+        color: var(--primary-dark);
+    }
+    .contact-form {
+        background-color: var(--primary-light);
+    }
+    .contact-form .left {
+        background-color: var(--btn-dark);
+    }
+    .contact-form h1 {
+        color: var(--main-font);
+    }
+    .contact-form .input:focus {
+        border: 1px solid var(--main-font);
+    }    
+    .contact-form .btn {
+        background-color: var(--btn-dark);
+    }
+    .contact-form .btn a {
+        color: var(--main-header);
+    }
+    .btn:hover {
+        background-color: var(--btn-hover-dark);
+    }
+}
