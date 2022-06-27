@@ -293,6 +293,9 @@ input[type="number"] {
     .contact-form .btn {
         top: -4rem;
     }
+    .no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 @media screen and (min-width: 750px) and (max-width: 915px) and (orientation: landscape) {
@@ -323,6 +326,9 @@ input[type="number"] {
     }
     .contact-form .btn {
         top: -4rem;
+    }
+    .no-scroll {
+        overflow-y: hidden;
     }
 }
 
@@ -357,6 +363,9 @@ input[type="number"] {
     }
     .contact-form .btn {
         top: -4rem;
+    }
+    .no-scroll {
+        overflow-y: hidden;
     }
 }
 

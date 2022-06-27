@@ -238,6 +238,9 @@ img {
     .img-gallery:nth-child(18) {
         grid-column: span 1;
     }
+    .no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 @media screen and (min-width: 750px) and (max-width: 915px) and (orientation: landscape) {
@@ -247,6 +250,9 @@ img {
     nav ul li {
         margin-left: 0;
     }
+    .no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 @media screen and (max-width: 915px) and (orientation: landscape) {
@@ -255,6 +261,9 @@ img {
     }
     header h1 {
         font-size: 1.2rem;
+    }
+    .no-scroll {
+        overflow-y: hidden;
     }
 }
 

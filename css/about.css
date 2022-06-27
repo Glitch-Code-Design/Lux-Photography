@@ -240,6 +240,9 @@ main a:hover {
     nav ul li {
         margin-left: 0;
     }
+    .no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 @media screen and (max-width: 915px) and (orientation: landscape) {
@@ -248,6 +251,9 @@ main a:hover {
     }
     header h1 {
         font-size: 1.2rem;
+    }
+    .no-scroll {
+        overflow-y: hidden;
     }
 }
 

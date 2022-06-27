@@ -242,6 +242,9 @@ header h1 {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+    .no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 @media screen and (min-width: 750px) and (max-width: 915px) and (orientation: landscape) {
@@ -257,6 +260,9 @@ header h1 {
     main h1 {
         margin: 2rem 0 1rem 0;
     }
+    .no-scroll {
+        overflow-y: hidden;
+    }
 }
 
 @media screen and (max-width: 915px) and (orientation: landscape) {
@@ -268,6 +274,9 @@ header h1 {
     }
     main h1 {
         margin: 2rem 0 1rem 0;
+    }
+    .no-scroll {
+        overflow-y: hidden;
     }
 }
 
