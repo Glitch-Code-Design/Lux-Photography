@@ -1,7 +1,6 @@
-I'm a self taught Web Designer
-
 # Lux Photography
  Photography Website
 
+I'm a self taught Web Designer
 
-Photo Credits : pexels.com / unsplash.com / pixabay.com
+Photo Credits : Pexels.com / Unsplash.com / Pixabay.com
