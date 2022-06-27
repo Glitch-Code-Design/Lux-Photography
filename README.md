@@ -3,4 +3,8 @@
 
 I'm a self taught Web Designer
 
-Photo Credits : Pexels.com / Unsplash.com / Pixabay.com
+Photo Credits : 
+
+- https://unsplash.com/
+- https://www.pexels.com/
+- https://pixabay.com/
